@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+:root {
+    --color-10: hsl(0, 100%, 100%);
+    --color-20: hsl(230, 100%, 90%);
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.full_screen_div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(
+        0deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+    );
+}
+
+.clock_frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 30rem;
+    border: 15px solid var(--color-10);
+    border-radius: 50%;
+}
+
+.arms_point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2em;
+    height: 2rem;
+    background-color: var(--color-10);
+    border-radius: 50%;
+}
+
+.arm {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: var(--color-10);
+    transform-origin: bottom;
+}
+
+.arm_seconds {
+    width: 0.4em;
+    height: 10rem;
+    background-color: var(--color-20);
+}
+
+.arm_minutes {
+    width: 0.7em;
+    height: 10rem;
+}
+.arm_hours {
+    width: 0.7em;
+    height: 6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    :root {
+        font-size: 7px;
+    }
+}
